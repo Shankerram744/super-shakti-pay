@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#071b3b;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:white;
+width:90%;
+max-width:400px;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+h2{
+color:#071b3b;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:gold;
+border:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Create Account</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="mobile" placeholder="Mobile Number">
+
+<input type="password" id="password" placeholder="Password">
+
+<input type="password" id="confirm" placeholder="Confirm Password">
+
+<input type="text" id="referral" placeholder="Referral Code (Optional)">
+
+<button onclick="register()">Create Account</button>
+
+</div>
+
+<script>
+function register(){
+
+let name = document.getElementById("name").value;
+let mobile = document.getElementById("mobile").value;
+let password = document.getElementById("password").value;
+let confirm = document.getElementById("confirm").value;
+let referral = document.getElementById("referral").value;
+
+if(name=="" || mobile=="" || password==""){
+alert("Please fill all fields");
+return;
+}
+
+if(password!=confirm){
+alert("Passwords do not match");
+return;
+}
+
+localStorage.setItem("name", name);
+localStorage.setItem("mobile", mobile);
+localStorage.setItem("password", password);
+localStorage.setItem("referral", referral);
+
+alert("Account Created Successfully!");
+window.location.href="login.html";
+}
+</script>
+
+<div id="recaptcha-container"></div>
+
+</body>
+</html>

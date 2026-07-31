@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Withdraw Money</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+.header{
+background:#071b3b;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.box{
+background:white;
+width:90%;
+max-width:400px;
+margin:30px auto;
+padding:20px;
+border-radius:15px;
+box-shadow:0 3px 8px rgba(0,0,0,.2);
+text-align:center;
+}
+
+input{
+width:90%;
+padding:15px;
+font-size:18px;
+margin:15px 0;
+border:1px solid #ccc;
+border-radius:10px;
+}
+
+button{
+width:95%;
+padding:15px;
+background:gold;
+border:none;
+font-size:20px;
+font-weight:bold;
+border-radius:30px;
+cursor:pointer;
+margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+Withdraw Money
+</div>
+
+<div class="box">
+
+<h2>Wallet Balance</h2>
+
+<h1>₹ <span id="balance">0</span></h1>
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+<button onclick="withdrawMoney()">Withdraw</button>
+
+<br><br>
+
+<button onclick="window.location.href='dashboard.html'">
+⬅ Back to Dashboard
+</button>
+
+</div>
+
+<script>
+
+document.getElementById("balance").innerHTML =
+localStorage.getItem("balance") || 0;
+
+function withdrawMoney(){
+
+let amount = parseInt(document.getElementById("amount").value);
+
+if(!amount || amount<=0){
+alert("Enter Valid Amount");
+return;
+}
+
+let balance = parseInt(localStorage.getItem("balance")) || 0;
+
+if(amount > balance){
+alert("Insufficient Balance");
+return;
+}
+
+balance = balance - amount;
+
+localStorage.setItem("balance", balance);
+
+// History Save
+let history = localStorage.getItem("history") || "";
+
+history =
+"💸 Withdraw ₹" + amount +
+"<br>" + new Date().toLocaleString() +
+"<hr>" + history;
+
+localStorage.setItem("history", history);
+
+document.getElementById("balance").innerHTML = balance;
+
+alert("₹" + amount + " Withdraw Successfully");
+
+window.location.href="dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>

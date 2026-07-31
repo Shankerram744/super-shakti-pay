@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#071b3b;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:white;
+width:90%;
+max-width:400px;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:gold;
+border:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+}
+
+a{
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Super Shakti Pay</h2>
+
+<input type="text" id="mobile" placeholder="Mobile Number">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p>
+New User?
+<a href="register.html">Create Account</a>
+</p>
+
+</div>
+
+<script>
+function login(){
+
+let mobile=document.getElementById("mobile").value;
+let password=document.getElementById("password").value;
+
+let savedMobile=localStorage.getItem("mobile");
+let savedPassword=localStorage.getItem("password");
+
+if(mobile==savedMobile && password==savedPassword){
+window.location.href="dashboard.html";
+}else{
+alert("Invalid Mobile or Password");
+}
+
+}
+</script>
+
+</body>
+</html>
