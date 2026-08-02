@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wallet | Super Shakti Pay</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071b3b;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:15px;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+margin:20px 0;
+}
+
+.balance-card{
+background:linear-gradient(135deg,#0d47a1,#42a5f5);
+padding:25px;
+border-radius:20px;
+color:#fff;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+margin-bottom:20px;
+}
+
+.balance-card h1{
+font-size:42px;
+margin:15px 0;
+}
+
+.action{
+background:#fff;
+padding:18px;
+margin-bottom:15px;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.action:hover{
+transform:scale(1.02);
+transition:.3s;
+}
+
+.back{
+width:100%;
+padding:15px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+background:#e53935;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h2 style="color:white;">
+💰 My Wallet
+</h2>
+
+</div>
+
+<div class="balance-card">
+
+<p>Available Balance</p>
+
+<h1>₹ <span id="wallet">0</span></h1>
+
+<p>Super Shakti Pay Wallet</p>
+
+</div>
+
+<div class="action" onclick="location.href='add-money.html'">
+
+<span>➕ Add Money</span>
+
+<span>></span>
+
+</div>
+
+<div class="action" onclick="location.href='withdraw.html'">
+
+<span>💸 Withdraw</span>
+
+<span>></span>
+
+</div>
+
+<div class="action" onclick="location.href='history.html'">
+
+<span>📜 Transaction History</span>
+
+<span>></span>
+
+</div>
+<div class="action" onclick="location.href='refer.html'">
+
+<span>🎁 Refer & Earn</span>
+
+<span>></span>
+
+</div>
+
+<div class="action" onclick="location.href='dashboard.html'">
+
+<span>🏠 Back To Dashboard</span>
+
+<span>></span>
+
+</div>
+
+<button class="back" onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+<script type="module" src="wallet.js"></script>
+
+</body>
+</html>

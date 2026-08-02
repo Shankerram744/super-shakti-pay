@@ -1,68 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transaction History</title>
+
+<title>Transaction History | Super Shakti Pay</title>
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071b3b;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:15px;
 }
 
 .header{
+text-align:center;
+color:white;
+font-size:28px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.history-card{
+background:white;
+padding:15px;
+border-radius:15px;
+margin-bottom:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.left h3{
+font-size:18px;
+color:#071b3b;
+}
+
+.left p{
+font-size:14px;
+color:gray;
+margin-top:5px;
+}
+
+.right{
+text-align:right;
+}
+
+.amount{
+font-size:20px;
+font-weight:bold;
+color:green;
+}
+
+.status{
+font-size:14px;
+color:#28a745;
+margin-top:5px;
+}
+
+.back{
+width:100%;
+padding:15px;
+margin-top:20px;
 background:#071b3b;
 color:white;
-text-align:center;
-padding:20px;
-font-size:24px;
-font-weight:bold;
-}
-
-.card{
-background:white;
-margin:15px;
-padding:15px;
-border-radius:12px;
-box-shadow:0 2px 6px rgba(0,0,0,.2);
-font-size:18px;
-}
-
-button{
-margin:20px;
-padding:12px 20px;
-background:gold;
 border:none;
-border-radius:25px;
+border-radius:30px;
 font-size:18px;
 font-weight:bold;
+cursor:pointer;
 }
+
 </style>
 
 </head>
 
 <body>
 
+<div class="container">
+
 <div class="header">
-Transaction History
+📜 Transaction History
 </div>
 
-<div class="card" id="history">
-No Transactions Yet
+<div id="historyList">
+  <div class="history-card">
+
+<div class="left">
+<h3>Wallet Credit</h3>
+<p>01 Aug 2026 | 10:30 AM</p>
 </div>
 
-<center>
-<button onclick="window.location.href='dashboard.html'">
-⬅ Back
+<div class="right">
+<div class="amount">+ ₹500</div>
+<div class="status">Success</div>
+</div>
+
+</div>
+
+<div class="history-card">
+
+<div class="left">
+<h3>Withdraw Request</h3>
+<p>31 Jul 2026 | 04:15 PM</p>
+</div>
+
+<div class="right">
+<div class="amount" style="color:red;">- ₹200</div>
+<div class="status" style="color:#ff9800;">Pending</div>
+</div>
+
+</div>
+
+</div>
+
+<button class="back"
+onclick="location.href='dashboard.html'">
+🏠 Back To Dashboard
 </button>
-</center>
 
-<script>
-document.getElementById("history").innerHTML =
-localStorage.getItem("history") || "No Transactions Yet";
-</script>
+</div>
+
+<script type="module" src="history.js"></script>
 
 </body>
 </html>

@@ -1,76 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Super Shakti Pay</title>
 
 <style>
-body{
-    margin:0;
-    background:#071b3b;
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
+body{
+
+margin:0;
+background:#071b3b;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
 
 .box{
-    text-align:center;
+
+text-align:center;
+
 }
+
 
 .logo{
-    width:120px;
-    height:120px;
-    background:gold;
-    color:#071b3b;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:60px;
-    font-weight:bold;
-    margin:auto;
+
+width:120px;
+height:120px;
+background:gold;
+color:#071b3b;
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:60px;
+font-weight:bold;
+
+margin:auto;
+
+box-shadow:0 0 20px gold;
+
 }
+
 
 h1{
-    color:gold;
+
+color:gold;
+margin-top:20px;
+font-size:28px;
+
 }
+
 
 p{
-    color:white;
+
+color:white;
+margin-top:10px;
+font-size:16px;
+
 }
 
-button{
-    margin-top:20px;
-    background:gold;
-    color:#071b3b;
-    border:none;
-    padding:15px 50px;
-    border-radius:30px;
-    font-size:20px;
-    font-weight:bold;
+
+.btn{
+
+width:220px;
+padding:15px;
+
+margin-top:20px;
+
+border:none;
+border-radius:30px;
+
+font-size:18px;
+font-weight:bold;
+
+cursor:pointer;
+
 }
+
+
+.login-btn{
+
+background:gold;
+color:#071b3b;
+
+}
+
+
+.register-btn{
+
+background:white;
+color:#071b3b;
+
+}
+
 </style>
 
 </head>
 
+
 <body>
+
 
 <div class="box">
 
-<div class="logo">S</div>
 
-<h1>SUPER SHAKTI PAY</h1>
+<div class="logo">
+S
+</div>
 
-<p>Fast • Secure • Smart Payments</p>
 
-<button class="login-btn" onclick="window.location.href='login.html'">
+<h1>
+SUPER SHAKTI PAY
+</h1>
+
+
+<p>
+Fast • Secure • Smart Payments
+</p>
+<button class="btn login-btn" 
+onclick="window.location.href='login.html'">
 Login
 </button>
 
+
+<br>
+
+
+<button class="btn register-btn" 
+onclick="window.location.href='register.html'">
+Register
+</button>
+
+
 </div>
 
+
 </body>
+
 </html>

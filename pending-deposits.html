@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pending Deposits | Super Shakti Pay</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071b3b;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:20px;
+}
+
+.header{
+text-align:center;
+color:#fff;
+font-size:28px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+margin-bottom:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.title{
+font-size:20px;
+font-weight:bold;
+margin-bottom:15px;
+color:#071b3b;
+}
+
+.request{
+padding:15px;
+border-bottom:1px solid #ddd;
+}
+
+.request:last-child{
+border-bottom:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+📥 Pending Deposit Requests
+</div>
+
+<div class="card">
+
+<div class="title">
+Deposit Requests
+</div>
+
+<div id="requestList">
+
+<p style="text-align:center;color:gray;">
+No Pending Requests
+</p>
+
+</div>
+
+</div>
+
+<button
+style="
+width:100%;
+padding:15px;
+border:none;
+border-radius:30px;
+background:#071b3b;
+color:white;
+font-size:18px;
+font-weight:bold;"
+onclick="location.href='admin.html'">
+
+⬅ Back To Admin
+
+</button>
+
+</div>
+
+<script type="module" src="pending-deposits.js"></script>
+
+</body>
+</html>

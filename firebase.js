@@ -1,8 +1,17 @@
-// Firebase Configuration
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+// Firebase SDK
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  set,
+  get,
+  update,
+  remove,
+  push,
+  onValue
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 
+// Firebase Config
 const firebaseConfig = {
   apiKey: "AIzaSyBFK8LtZrSAZpqeC8dlz4Fgpd8u4yX72B4",
   authDomain: "super-shakti-pay.firebaseapp.com",
@@ -14,9 +23,18 @@ const firebaseConfig = {
   measurementId: "G-S0Y6MEJ9P3"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-const auth = getAuth(app);
-const database = getDatabase(app);
-
-export { app, auth, database };
+// Export
+export {
+  db,
+  ref,
+  set,
+  get,
+  update,
+  remove,
+  push,
+  onValue
+};

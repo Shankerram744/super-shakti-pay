@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.card{
+background:#fff;
+padding:20px;
+margin:10px 0;
+border-radius:15px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.number{
+font-size:30px;
+font-weight:bold;
+color:#071b3b;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h2>Admin Dashboard</h2>
+
+<div class="card">
+<p>Total Users</p>
+<div class="number" id="users">0</div>
+</div>
+
+<div class="card">
+<p>Total Wallet Balance</p>
+<div class="number">₹ <span id="wallet">0</span></div>
+</div>
+
+<div class="card">
+<p>Total Bonus</p>
+<div class="number">₹ <span id="bonus">0</span></div>
+</div>
+
+<button onclick="window.location='admin.html'">
+Manage Users
+</button>
+
+</div>
+
+<script type="module" src="admin-dashboard.js"></script>
+
+</body>
+</html>

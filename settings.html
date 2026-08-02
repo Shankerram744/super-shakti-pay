@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings | Super Shakti Pay</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071b3b;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:20px;
+}
+
+.header{
+text-align:center;
+color:white;
+font-size:28px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+border-bottom:1px solid #eee;
+cursor:pointer;
+}
+
+.item:last-child{
+border-bottom:none;
+}
+
+.item span{
+font-size:18px;
+font-weight:bold;
+color:#071b3b;
+}
+
+.arrow{
+font-size:20px;
+color:#888;
+}
+
+.btn{
+width:100%;
+padding:15px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.logout{
+background:#e53935;
+color:white;
+}
+
+.back{
+background:#071b3b;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+⚙️ Settings
+</div>
+
+<div class="card">
+
+<div class="item">
+<span>🔐 Change Password</span>
+<div class="arrow">></div>
+</div>
+
+<div class="item">
+<span>🔔 Notifications</span>
+<div class="arrow">></div>
+</div>
+
+<div class="item">
+<span>🌙 Dark Mode</span>
+<div class="arrow">></div>
+</div>
+
+<div class="item">
+<span>ℹ️ About App</span>
+<div class="arrow">></div>
+</div>
+<button class="btn logout" onclick="logout()">
+🚪 Logout
+</button>
+
+<button class="btn back"
+onclick="location.href='dashboard.html'">
+🏠 Back To Dashboard
+</button>
+
+</div>
+
+</div>
+
+<script type="module" src="settings.js"></script>
+
+</body>
+</html>

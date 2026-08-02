@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Withdraw | Super Shakti Pay</title>
+<title>Add Money | Super Shakti Pay</title>
 
 <style>
 
@@ -28,7 +27,7 @@ padding:15px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:20px;
 box-shadow:0 5px 20px rgba(0,0,0,.2);
@@ -42,8 +41,8 @@ margin-bottom:20px;
 
 label{
 display:block;
-font-weight:bold;
 margin-bottom:8px;
+font-weight:bold;
 }
 
 input{
@@ -66,80 +65,61 @@ cursor:pointer;
 margin-top:10px;
 }
 
-.withdraw{
-background:#e53935;
-color:white;
+.add{
+background:#28a745;
+color:#fff;
 }
 
 .back{
 background:#071b3b;
-color:white;
+color:#fff;
 }
 
 .note{
-background:#f5f5f5;
-padding:15px;
-border-radius:10px;
 margin-top:20px;
-color:#555;
+padding:15px;
+background:#f5f5f5;
+border-radius:10px;
 font-size:14px;
+color:#555;
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <div class="container">
 
 <div class="card">
 
-<h2>
-💸 Withdraw Money
-</h2>
+<h2>➕ Add Money</h2>
 
-
-<label>
-Enter Withdraw Amount
-</label>
-
+<label>Enter Amount</label>
 
 <input
 type="number"
 id="amount"
 placeholder="Enter Amount">
 
-<button class="withdraw" onclick="withdrawMoney()">
-
-Request Withdraw
-
+<button class="add" onclick="addMoney()">
+Continue
 </button>
+
 <div class="note">
-
-Withdraw request will be processed by Admin.
-
+This is the Add Money screen UI.
 </div>
-
-
 <button class="back"
 onclick="location.href='wallet.html'">
-
 ⬅ Back To Wallet
-
 </button>
 
-
 </div>
 
 </div>
 
-
-<script type="module" src="withdraw.js"></script>
-
+<script type="module" src="add-money.js"></script>
 
 </body>
-
 </html>

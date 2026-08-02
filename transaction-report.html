@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transaction Report | Super Shakti Pay</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071b3b;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:15px;
+}
+
+.header{
+color:white;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+margin:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.box{
+background:#0d47a1;
+color:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+}
+
+.transaction{
+border-bottom:1px solid #ddd;
+padding:15px 0;
+}
+
+.amount{
+font-weight:bold;
+font-size:18px;
+}
+
+.status{
+color:green;
+}
+
+.back{
+width:100%;
+padding:15px;
+border:none;
+border-radius:30px;
+background:#071b3b;
+color:white;
+font-size:18px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+
+<div class="header">
+📊 Transaction Report
+</div>
+
+
+<div class="card">
+
+<div class="stats">
+
+<div class="box">
+
+<h2 id="totalDeposit">
+₹0
+</h2>
+
+<p>
+Total Deposit
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h2 id="totalWithdraw">
+₹0
+</h2>
+
+<p>
+Total Withdraw
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div id="reportList">
+
+<p>
+Loading Transactions...
+</p>
+
+</div>
+
+</div>
+
+
+<button class="back"
+onclick="location.href='dashboard.html'">
+
+🏠 Back To Dashboard
+
+</button>
+
+
+</div>
+
+
+<script type="module" src="transaction-report.js"></script>
+
+
+</body>
+
+</html>

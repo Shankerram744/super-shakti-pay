@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
+
+<title>Login | Super Shakti Pay</title>
+
+<link rel="stylesheet" href="style.css">
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#071b3b;
 display:flex;
 justify-content:center;
@@ -16,77 +26,122 @@ align-items:center;
 height:100vh;
 }
 
-.box{
-background:white;
-width:90%;
-max-width:400px;
-padding:25px;
+.container{
+width:100%;
+max-width:420px;
+padding:20px;
+}
+
+.card{
+background:#fff;
 border-radius:20px;
+padding:30px;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.logo{
 text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#071b3b;
+margin-bottom:10px;
 }
 
-input{
+.sub{
+text-align:center;
+color:#666;
+margin-bottom:25px;
+}
+
+.input{
 width:100%;
-padding:12px;
-margin:10px 0;
-font-size:16px;
+padding:15px;
+margin-bottom:15px;
 border:1px solid #ccc;
-border-radius:8px;
+border-radius:10px;
+font-size:16px;
+outline:none;
 }
 
-button{
+.input:focus{
+border-color:#071b3b;
+}
+
+.btn{
 width:100%;
-padding:14px;
-background:gold;
+padding:15px;
 border:none;
 border-radius:30px;
+background:#071b3b;
+color:#fff;
 font-size:18px;
 font-weight:bold;
+cursor:pointer;
 }
 
-a{
+.btn:hover{
+background:#0d47a1;
+}
+
+.link{
+text-align:center;
+margin-top:20px;
+}
+
+.link a{
+color:#071b3b;
 text-decoration:none;
 font-weight:bold;
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-<h2>Super Shakti Pay</h2>
+<div class="card">
 
-<input type="text" id="mobile" placeholder="Mobile Number">
+<div class="logo">
+💳 Super Shakti Pay
+</div>
 
-<input type="password" id="password" placeholder="Password">
+<div class="sub">
+Login to your account
+</div>
 
-<button onclick="login()">Login</button>
+<input
+type="text"
+id="mobile"
+class="input"
+placeholder="Mobile Number"
+maxlength="10">
 
-<p>
-New User?
-<a href="register.html">Create Account</a>
-</p>
+<input
+type="password"
+id="password"
+class="input"
+placeholder="Password">
+
+<button
+class="btn"
+onclick="login()">
+Login
+</button>
+
+<div class="link">
+Don't have an account?
+<a href="register.html">
+Register
+</a>
+</div>
 
 </div>
 
-<script>
-function login(){
-
-let mobile=document.getElementById("mobile").value;
-let password=document.getElementById("password").value;
-
-let savedMobile=localStorage.getItem("mobile");
-let savedPassword=localStorage.getItem("password");
-
-if(mobile==savedMobile && password==savedPassword){
-window.location.href="dashboard.html";
-}else{
-alert("Invalid Mobile or Password");
-}
-
-}
-</script>
+</div>
+<script src="login.js"></script>
 
 </body>
 </html>

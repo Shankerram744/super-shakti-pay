@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register</title>
+
+<title>Register | Super Shakti Pay</title>
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#071b3b;
 display:flex;
 justify-content:center;
@@ -16,91 +24,130 @@ align-items:center;
 height:100vh;
 }
 
-.box{
-background:white;
-width:90%;
-max-width:400px;
-padding:25px;
+.container{
+width:100%;
+max-width:420px;
+padding:20px;
+}
+
+.card{
+background:#fff;
+padding:30px;
 border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.logo{
 text-align:center;
-}
-
-h2{
+font-size:30px;
+font-weight:bold;
 color:#071b3b;
+margin-bottom:10px;
 }
 
-input{
+.sub{
+text-align:center;
+color:#666;
+margin-bottom:20px;
+}
+
+.input{
 width:100%;
-padding:12px;
-margin:10px 0;
-font-size:16px;
+padding:15px;
+margin-bottom:15px;
 border:1px solid #ccc;
-border-radius:8px;
+border-radius:10px;
+font-size:16px;
+outline:none;
 }
 
-button{
+.input:focus{
+border-color:#071b3b;
+}
+
+.btn{
 width:100%;
-padding:14px;
-background:gold;
+padding:15px;
 border:none;
 border-radius:30px;
+background:#071b3b;
+color:#fff;
 font-size:18px;
 font-weight:bold;
 cursor:pointer;
 }
+
+.link{
+text-align:center;
+margin-top:20px;
+}
+
+.link a{
+text-decoration:none;
+font-weight:bold;
+color:#071b3b;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-<h2>Create Account</h2>
+<div class="card">
 
-<input type="text" id="name" placeholder="Full Name">
+<div class="logo">
+💳 Super Shakti Pay
+</div>
 
-<input type="text" id="mobile" placeholder="Mobile Number">
+<div class="sub">
+Create New Account
+</div>
 
-<input type="password" id="password" placeholder="Password">
+<input
+type="text"
+id="name"
+class="input"
+placeholder="Full Name">
 
-<input type="password" id="confirm" placeholder="Confirm Password">
+<input
+type="text"
+id="mobile"
+class="input"
+placeholder="Mobile Number"
+maxlength="10">
 
-<input type="text" id="referral" placeholder="Referral Code (Optional)">
+<input
+type="password"
+id="password"
+class="input"
+placeholder="Password">
 
-<button onclick="register()">Create Account</button>
+<input
+type="password"
+id="confirmPassword"
+class="input"
+placeholder="Confirm Password">
+
+<button
+class="btn"
+onclick="register()">
+Create Account
+</button>
+
+<div class="link">
+Already have an account?
+<a href="login.html">
+Login
+</a>
+</div>
 
 </div>
 
-<script>
-function register(){
-
-let name = document.getElementById("name").value;
-let mobile = document.getElementById("mobile").value;
-let password = document.getElementById("password").value;
-let confirm = document.getElementById("confirm").value;
-let referral = document.getElementById("referral").value;
-
-if(name=="" || mobile=="" || password==""){
-alert("Please fill all fields");
-return;
-}
-
-if(password!=confirm){
-alert("Passwords do not match");
-return;
-}
-
-localStorage.setItem("name", name);
-localStorage.setItem("mobile", mobile);
-localStorage.setItem("password", password);
-localStorage.setItem("referral", referral);
-
-alert("Account Created Successfully!");
-window.location.href="login.html";
-}
-</script>
-
-<div id="recaptcha-container"></div>
+</div>
+<script type="module" src="register.js"></script>
 
 </body>
 </html>

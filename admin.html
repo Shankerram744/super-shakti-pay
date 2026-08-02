@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel | Super Shakti Pay</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071b3b;
+padding:15px;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+}
+
+.header{
+text-align:center;
+color:#fff;
+font-size:30px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.title{
+font-size:20px;
+font-weight:bold;
+color:#071b3b;
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.box{
+background:#0d47a1;
+color:#fff;
+padding:20px;
+border-radius:12px;
+text-align:center;
+}
+
+.box h2{
+font-size:28px;
+}
+
+.box p{
+margin-top:8px;
+font-size:14px;
+}
+
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+outline:none;
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+}
+
+.credit{
+background:#28a745;
+color:#fff;
+}
+
+.debit{
+background:#e53935;
+color:#fff;
+}
+
+.back{
+background:#071b3b;
+color:#fff;
+}
+
+.user{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+border-bottom:1px solid #ddd;
+}
+
+.user:last-child{
+border-bottom:none;
+}
+
+.name{
+font-weight:bold;
+color:#071b3b;
+}
+
+.mobile{
+font-size:14px;
+color:gray;
+}
+
+.wallet{
+font-weight:bold;
+color:green;
+font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+🛡️ Super Shakti Pay Admin
+</div>
+
+<div class="card">
+
+<div class="title">
+Dashboard Statistics
+</div>
+
+<div class="stats">
+
+<div class="box">
+<h2 id="totalUsers">0</h2>
+<p>Total Users</p>
+</div>
+
+<div class="box">
+<h2 id="totalBalance">₹0</h2>
+<p>Total Wallet</p>
+</div>
+
+</div>
+
+</div>
+<div class="card">
+
+<div class="title">
+💰 Wallet Management
+</div>
+
+<input
+type="text"
+id="userMobile"
+placeholder="Enter User Mobile">
+
+<input
+type="number"
+id="walletAmount"
+placeholder="Enter Amount">
+
+<button
+class="credit"
+onclick="creditWallet()">
+➕ Credit Wallet
+</button>
+
+<button
+class="debit"
+onclick="debitWallet()">
+➖ Debit Wallet
+</button>
+
+</div>
+
+<div class="card">
+
+<input
+type="text"
+id="searchUser"
+placeholder="🔍 Search by Name or Mobile"
+style="
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:10px;"
+onkeyup="searchUser()">
+
+<div class="title">
+👥 Registered Users
+</div>
+
+<div id="userList">
+
+<p style="text-align:center;color:gray;">
+Loading Users...
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="title">
+📥 Add Money Requests
+</div>
+
+<div class="card">
+
+<div class="title">
+📥 Add Money Requests
+</div>
+
+<div id="requestList">
+
+<p style="text-align:center;color:gray;">
+No Requests Found
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="title">
+💸 Withdraw Requests
+</div>
+
+<div id="withdrawList">
+
+<p style="text-align:center;color:gray;">
+No Withdraw Requests Found
+</p>
+
+</div>
+
+</div>
+
+<p style="text-align:center;color:gray;">
+No Withdraw Requests Found
+</p>
+
+</div>
+
+</div>
+<p style="text-align:center;color:gray;">
+No Requests Found
+</p>
+
+</div>
+
+</div>
+
+<button
+class="back"
+onclick="location.href='dashboard.html'">
+🏠 Back To Dashboard
+</button>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
